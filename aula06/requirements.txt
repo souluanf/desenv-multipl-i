@@ -1,0 +1,8 @@
+python-dotenv
+sqlalchemy
+psycopg2-binary
+pydantic
+email_validator
+pytest
+httpx
+fastapi
