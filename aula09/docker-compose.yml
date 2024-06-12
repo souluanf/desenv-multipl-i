@@ -1,0 +1,41 @@
+services:
+  rabbitmq:
+    env_file:
+      - .env
+    image: "rabbitmq:3-management"
+    container_name: rabbitmq
+    hostname: rabbitmq
+    environment:
+      RABBITMQ_DEFAULT_USER: ${RABBITMQ_DEFAULT_USERNAME}
+      RABBITMQ_DEFAULT_PASS: ${RABBITMQ_DEFAULT_PASSWORD}
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+  postgres:
+    env_file:
+      - .env
+    image: postgres
+    container_name: postgres
+    hostname: postgres
+    environment:
+      POSTGRES_USER: ${DATABASE_USER}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
+      POSTGRES_DB: ${DATABASE_NAME}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  app:
+    build:
+      context: .
+      dockerfile: .docker/Dockerfile.prod
+    env_file:
+      - .env
+    ports:
+     - "8000:8000"
+    depends_on:
+      - postgres
+      - rabbitmq
+
+volumes:
+  postgres_data:

@@ -1,0 +1,71 @@
+2024-05-07 18:37:28,452 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-07 18:37:36,616 [AnyIO worker thread] [aula05] INFO fastapi.find_all - Finding all users
+2024-05-07 18:38:21,004 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-07 18:38:40,378 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:03,338 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-07 18:39:06,089 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:08,405 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:08,407 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:08,572 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:08,573 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:08,732 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:08,733 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:08,903 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:08,904 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:09,087 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:09,088 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:09,253 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:09,253 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:09,412 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:09,413 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:09,583 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:09,585 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:09,766 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:09,767 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:09,949 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:09,950 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:10,127 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:10,127 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 18:39:10,578 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 18:39:10,580 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=string, email=user@example.com, password=string, cpf=43901571833, phone=11954875270)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('string', 'user@example.com', 'string', '43901571833', '11954875270')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-07 20:11:31,191 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-07 20:11:36,072 [AnyIO worker thread] [aula05] INFO fastapi.find_all - Finding all users
+2024-05-07 20:12:02,237 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=string, email=email@example.com, password=string, cpf=43901571833, phone=11954875270)>
+2024-05-07 20:12:08,447 [AnyIO worker thread] [aula05] INFO fastapi.find_all - Finding all users
+2024-05-07 20:12:46,844 [MainThread] [aula05] INFO fastapi.<module> - Starting application

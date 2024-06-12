@@ -1,0 +1,297 @@
+2024-05-21 18:31:41,082 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:10:36,968 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:17:10,678 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:17:19,152 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:17:19,158 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:18:15,713 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:18:15,715 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('John Doe', 'email@email.com', '123456789', '99999999999', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 19:18:23,376 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:18:23,382 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:22:22,158 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:22:22,180 [Thread-1 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:22:22,182 [Thread-1 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 19:22:22,203 [MainThread] [aula05] INFO fastapi.startup_event - Application startup: RabbitMQ consumer thread started.
+2024-05-21 19:22:52,633 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:22:52,639 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:22:52,640 [Thread-1 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:23:07,973 [MainThread] [aula05] INFO fastapi.shutdown_event - Application shutdown: Cleaning up resources.
+2024-05-21 19:23:31,620 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:23:31,642 [Thread-1 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:23:31,644 [Thread-1 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 19:23:34,327 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:23:34,332 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:23:34,334 [Thread-1 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:23:36,363 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:23:36,365 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('John Doe', 'email@email.com', '123456789', '99999999999', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 19:23:42,336 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:23:42,337 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('John Doe', 'email@email.com', '123456789', '99999999999', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 19:24:24,623 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:24:24,641 [Thread-1 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:24:24,643 [Thread-1 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 19:24:27,115 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:24:27,119 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:24:27,121 [Thread-1 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:24:29,103 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:24:29,105 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('John Doe', 'email@email.com', '123456789', '99999999999', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 19:24:31,124 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:24:31,125 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('John Doe', 'email@email.com', '123456789', '99999999999', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 19:28:44,311 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:28:44,328 [Thread-2 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:28:44,328 [Thread-2 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 19:28:54,603 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:28:54,612 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'id': 1, 'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:28:54,615 [Thread-2 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'create_user', 'user': {'id': 1, 'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:29:01,941 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:29:01,942 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('John Doe', 'email@email.com', '123456789', '99999999999', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 19:29:05,052 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:29:05,054 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('John Doe', 'email@email.com', '123456789', '99999999999', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 19:29:19,264 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:29:19,271 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'id': 1, 'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:29:19,272 [Thread-2 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'update_user', 'user': {'id': 1, 'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:30:43,915 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:30:43,949 [Thread-1 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:30:43,956 [Thread-1 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 19:30:47,705 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:30:47,708 [AnyIO worker thread] [aula05] ERROR fastapi.update_user - User with id 1 not found
+2024-05-21 19:30:52,527 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:30:52,531 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:30:52,532 [Thread-1 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:30:59,892 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:30:59,894 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('John Doe', 'email@email.com', '123456789', '99999999999', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 19:31:07,252 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:31:07,256 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:31:07,258 [Thread-1 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:31:08,852 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:31:08,855 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:31:08,856 [Thread-1 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:31:09,785 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:31:09,786 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:31:09,788 [Thread-1 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:35:13,376 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:35:13,406 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:35:18,452 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:35:23,486 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:35:28,530 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:35:33,575 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:35:38,605 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:35:43,628 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:35:48,649 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:35:53,673 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:35:58,694 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:03,722 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:08,753 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:13,781 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:18,818 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:23,846 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:28,882 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:33,892 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:38,915 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:43,937 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:48,954 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:53,987 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:36:59,006 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:04,031 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:09,059 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:14,084 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:19,112 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:24,150 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:29,174 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:34,202 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:39,220 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:44,246 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:49,275 [Thread-1 (start_consumer)] [aula05] ERROR fastapi.connect - Failed to connect to RabbitMQ: ConnectionClosedByBroker: (403) 'ACCESS_REFUSED - Login was refused using authentication mechanism PLAIN. For details see the broker logfile.'. Retrying in 5 seconds...
+2024-05-21 19:37:52,499 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:37:52,530 [Thread-1 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:37:52,533 [Thread-1 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 19:39:34,140 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:39:34,157 [Thread-1 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:39:34,158 [Thread-1 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 19:40:12,613 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:40:12,642 [Thread-1 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:40:12,644 [Thread-1 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 19:41:59,460 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:41:59,484 [Thread-1 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:41:59,487 [Thread-1 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 19:42:03,754 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:42:03,755 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:42:03,759 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:42:03,763 [Thread-1 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:42:36,468 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:42:36,499 [Thread-1 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:42:36,503 [Thread-1 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 19:42:53,867 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:42:53,871 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:42:53,875 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:42:53,877 [Thread-1 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:43:30,132 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:43:34,868 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:43:34,869 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:43:34,874 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:43:36,151 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:43:36,152 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:43:36,153 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('John Doe', 'email@email.com', '123456789', '99999999999', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 19:43:39,403 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:43:39,404 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:43:39,411 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:44:04,703 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:44:04,703 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:44:04,706 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:45:47,487 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 19:45:54,831 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:45:54,836 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 19:45:54,840 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 19:45:56,576 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:45:56,576 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:45:56,583 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:45:57,016 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:45:57,016 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:45:57,018 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:45:57,355 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:45:57,355 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:45:57,356 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:45:59,222 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:45:59,222 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:45:59,224 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 19:45:59,692 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 19:45:59,692 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 19:45:59,693 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user_id': 1, 'user_data': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:02:49,064 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 21:14:18,024 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 21:14:31,282 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 21:14:34,789 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:34:44,063 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 21:35:20,886 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:35:20,890 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 21:35:20,895 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 21:36:20,605 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:20,605 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:20,610 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:21,334 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:21,334 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:21,336 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:21,708 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:21,708 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:21,714 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:22,081 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:22,081 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:22,088 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:22,479 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:22,479 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:22,482 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:22,796 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:22,796 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:22,799 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:23,924 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:23,925 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:23,927 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:24,412 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:24,412 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:24,413 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:24,877 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:24,877 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:24,879 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:25,338 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:25,338 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:25,341 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:25,791 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:25,791 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:25,794 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:36:26,208 [AnyIO worker thread] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 21:36:26,209 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:36:26,211 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:45:08,529 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 21:45:17,517 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=John Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 21:45:17,523 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'John Doe', 'email': 'email@email.com', 'password': '123456789', 'cpf': '99999999999', 'phone': '1199999999'}}
+2024-05-21 21:45:33,474 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:45:33,480 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:45:33,996 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:45:33,998 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:45:34,517 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:45:34,520 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:45:35,022 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:45:35,025 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:45:35,485 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:45:35,489 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:50:07,412 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=Jane Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>
+2024-05-21 21:50:07,413 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=Jane Doe, email=email@email.com, password=123456789, cpf=99999999999, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('Jane Doe', 'email@email.com', '123456789', '99999999999', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 21:50:19,201 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=Jane Doe, email=email@email.com, password=123456789, cpf=11111111111, phone=1199999999)>
+2024-05-21 21:50:19,204 [AnyIO worker thread] [aula05] ERROR fastapi.publish - Failed to publish message: Transport indicated EOF
+2024-05-21 21:50:49,622 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=Jane Doe, email=email@email.com, password=123456789, cpf=11111111111, phone=1199999999)>
+2024-05-21 21:50:49,623 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=Jane Doe, email=email@email.com, password=123456789, cpf=11111111111, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.cpf
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('Jane Doe', 'email@email.com', '123456789', '11111111111', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 21:51:04,048 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=Jane Doe, email=email@email.com, password=123456789, cpf=99999999922, phone=1199999999)>
+2024-05-21 21:51:04,049 [AnyIO worker thread] [aula05] ERROR fastapi.create_user - Error creating user: <User(id=None, name=Jane Doe, email=email@email.com, password=123456789, cpf=99999999922, phone=1199999999)>. Detail: (sqlite3.IntegrityError) UNIQUE constraint failed: users.email
+[SQL: INSERT INTO users (name, email, password, cpf, phone) VALUES (?, ?, ?, ?, ?)]
+[parameters: ('Jane Doe', 'email@email.com', '123456789', '99999999922', '1199999999')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-05-21 21:51:16,634 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=Jane Doe, email=bae@bae.com, password=123456789, cpf=99999999922, phone=1199999999)>
+2024-05-21 21:51:16,637 [AnyIO worker thread] [aula05] ERROR fastapi.publish - Failed to publish message: Channel is closed.
+2024-05-21 21:51:54,092 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 21:51:59,246 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=Jane Doe, email=bae@bae.com, password=123456789, cpf=99999999922, phone=1199999999)>
+2024-05-21 21:51:59,251 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'Jane Doe', 'email': 'bae@bae.com', 'password': '123456789', 'cpf': '99999999922', 'phone': '1199999999'}}
+2024-05-21 21:52:13,174 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:13,180 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:29,427 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:29,429 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:29,765 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:29,768 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:30,210 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:30,215 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:30,571 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:30,574 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:30,990 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:30,992 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:31,361 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:31,365 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:31,745 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:31,749 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:32,135 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:32,137 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:32,524 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:32,527 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:32,909 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:32,912 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:33,300 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:33,302 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:33,656 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:33,658 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 21:52:34,037 [AnyIO worker thread] [aula05] INFO fastapi.update_user - Updating user with id 1
+2024-05-21 21:52:34,039 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'update_user', 'user': {'name': 'John Updated', 'email': 'john@email.com', 'password': 'Psswd1234', 'phone': '1199999999'}}
+2024-05-21 22:01:06,548 [MainThread] [aula05] INFO fastapi.<module> - Starting application
+2024-05-21 22:01:06,571 [Thread-2 (start_consumer)] [aula05] INFO fastapi.connect - Connected to RabbitMQ
+2024-05-21 22:01:06,572 [Thread-2 (start_consumer)] [aula05] INFO fastapi.consume - Waiting for messages. To exit press CTRL+C
+2024-05-21 22:03:10,973 [AnyIO worker thread] [aula05] INFO fastapi.create_user - Creating user: <User(id=None, name=Jane Doe, email=bae@bae.com, password=123456789, cpf=99999999922, phone=1199999999)>
+2024-05-21 22:03:10,979 [AnyIO worker thread] [aula05] INFO fastapi.publish - Published message to RabbitMQ: {'event': 'create_user', 'user': {'name': 'Jane Doe', 'email': 'bae@bae.com', 'password': '123456789', 'cpf': '99999999922', 'phone': '1199999999'}}
+2024-05-21 22:03:10,984 [Thread-2 (start_consumer)] [aula05] INFO fastapi.callback - Received message: {'event': 'create_user', 'user': {'name': 'Jane Doe', 'email': 'bae@bae.com', 'password': '123456789', 'cpf': '99999999922', 'phone': '1199999999'}}
